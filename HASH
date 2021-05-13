@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+int *H;
+int size;
+int hashf(int val){
+    int i,r;
+    r=val%size;
+    return i;
+}
+void display(){
+    int i;
+    for(i=0;i<size;i++){
+        cout<<"["<<i<<":"<<++i<<"]"<<endl;
+    }
+}
+void insert(){
+    int val;
+    cout<<"enter value to be inserted:"<<endl;
+    cin>>val;
+    int i=hashf(val);
+    H[i]=val;
+    display();
+}
+void del(){
+    int val,i;
+    cout<<"enter value to be delected:"<<endl;
+    cin>>val;
+    int r=hashf(val);
+   if(H[i]=val){
+       H[i]=0;
+   }
+    display();
+}
+void search(){
+    int val;
+    cout<<"Enter value to search:"<<endl;
+    cin>>size;
+    H=(int*)calloc(size,sizeof(int));
+    while(true){
+        cout<<"1.insert\n 2.delete\n 3.search\n 4.exit"<<endl;
+        char ch;
+        cin>>ch;
+        switch(ch){
+            case '1': insert();
+                      break;
+            case '2': del();
+                       break;
+            case '3': search();
+                      break;
+            case '4':exit(0);
+            default:cout<<"invalid input";
+        }
+    } 
+    return 0;
+}    
+    
+    
+
+        
+    
+
+
+
+
